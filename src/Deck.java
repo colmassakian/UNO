@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Deck {
 
     enum Color {
@@ -14,7 +16,7 @@ public class Deck {
     public Deck() {
         currCard = 0;
         createDeck();
-//        shuffle();
+        shuffle();
     }
 
     private void createDeck() {
@@ -54,10 +56,21 @@ public class Deck {
         System.out.println("MADE DECK " + currIndex);
     }
 
-//    private void shuffle() {
-//
-//    }
-//
+    private void shuffle() {
+        int numShuffle = 80;
+        int index1, index2;
+
+        for(int i = 0; i < numShuffle; i ++)
+        {
+            index1 = (int)(Math.random() * 108);
+            index2 = (int)(Math.random() * 108);
+
+            Card temp = cards[index1];
+            cards[index1] = cards[index2];
+            cards[index2] = temp;
+        }
+    }
+
 //    public Card deal() {
 //
 //    }

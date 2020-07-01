@@ -1,7 +1,5 @@
 public class Card {
 
-
-
     int value;
     Deck.Color color;
 
@@ -16,5 +14,13 @@ public class Card {
 
     public Deck.Color getColor() {
         return color;
+    }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "value=" + value +
+                ", color=" + color +
+                '}';
     }
 }
