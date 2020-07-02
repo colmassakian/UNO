@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Deck {
 
     enum Color {
@@ -10,10 +8,10 @@ public class Deck {
         WILD
     }
 
-    Card[] cards = new Card[108];
-    int currCard;
+    private Card[] cards = new Card[108];
+    private int currCard;
 
-    public Deck() {
+    Deck() {
         currCard = 0;
         createDeck();
         shuffle();
@@ -71,7 +69,15 @@ public class Deck {
         }
     }
 
-//    public Card deal() {
-//
-//    }
+    public Card deal() {
+        Card topCard = null;
+        if(currCard < 108)
+        {
+            topCard = cards[currCard];
+            currCard ++;
+        }
+        //  TODO: Re-shuffle deck and start counter over
+
+        return topCard;
+    }
 }
