@@ -16,6 +16,10 @@ public class Card {
         return color;
     }
 
+    public void setColor(Deck.Color newColor) {
+        color = newColor;
+    }
+
     @Override
     public String toString() {
         return "Card{" +

@@ -12,6 +12,14 @@ public class Player {
         hand.add(newCard);
     }
 
+    public Card removeCard(int index) {
+        return hand.remove(index);
+    }
+
+    public Card getCard(int index){
+        return hand.get(index);
+    }
+
     public int getNumCards() {
         return hand.size();
     }
